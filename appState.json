@@ -1,0 +1,123 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "c52e4615-2950-47c0-8080-35e3ae89f9ed": {
+        "id": "c52e4615-2950-47c0-8080-35e3ae89f9ed",
+        "parent": null,
+        "name": "JS12",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "6302fe22-788f-44c9-a909-c2cb3c12a8d4"
+        ],
+        "isRemovable": false,
+        "filePath": "JS12"
+      },
+      "6302fe22-788f-44c9-a909-c2cb3c12a8d4": {
+        "id": "6302fe22-788f-44c9-a909-c2cb3c12a8d4",
+        "parent": "c52e4615-2950-47c0-8080-35e3ae89f9ed",
+        "name": "JS12.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "JS12/JS12.js",
+        "code": "exports.handler = async (event) => {\n    \n    return {\"message\": \"Successfully executed\"};\n};",
+        "config": {
+          "runtime": "nodejs12.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1TestAPIany",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "89bc4c05-5270-4de9-b1a5-cb6a739bdef4": {
+            "id": "89bc4c05-5270-4de9-b1a5-cb6a739bdef4",
+            "name": "Test event",
+            "functionId": "6302fe22-788f-44c9-a909-c2cb3c12a8d4",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "rootNode": "c52e4615-2950-47c0-8080-35e3ae89f9ed",
+    "openFiles": [
+      "6302fe22-788f-44c9-a909-c2cb3c12a8d4"
+    ],
+    "currentFileId": "6302fe22-788f-44c9-a909-c2cb3c12a8d4",
+    "resources": {
+      "apigusEast1TestAPIany": {
+        "name": "apigusEast1TestAPIany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/MyLambda": "98nqbj",
+            "/": "h2lelj6j7k",
+            "/newchange/test": "k6pdhn",
+            "/newchange": "q1ox7l",
+            "/testWithSlash": "q4m4g1",
+            "/testtwospeciallambda": "q4szm3",
+            "/testtwospecialkumutest": "wey3lk"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/",
+          "resourceName": "",
+          "resourceId": "h2lelj6j7k",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "Test",
+          "stageDeploymentId": "d0689s",
+          "mode": 1
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "JS12",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1576566146175
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "JS12",
+      "url": "https://github.com/Kumudikatest/JS12"
+    }
+  }
+}
