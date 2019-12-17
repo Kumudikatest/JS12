@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "JS12/JS12.js",
-        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\n\nexports.handler = async (event) => {\n    ddb.scan({\n        TableName: \"Shop\"\n    }).promise()\n        .then(data => {\n            // your code goes here\n            console.log(data);\n        })\n        .catch(err => {\n            // error handling goes here\n            console.log(err);\n        });\n\n    return { \"message\": \"Successfully executed\" };\n};",
+        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\n\nexports.handler = async (event) => {\n    ddb.scan({\n        TableName: \"Shop\"\n    }).promise()\n        .then(data => {\n            // your code goes here\n            console.log(data);\n        })\n        .catch(err => {\n            // error handling goes here\n            console.log(err);\n        });\n        \n    return { \"message\": \"Successfully executed\" };\n};",
         "config": {
           "runtime": "nodejs12.x",
           "handler": "handler",
@@ -30,12 +30,7 @@
           "memory": 448,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "apigusEast1TestAPIany",
-            "config": {}
-          }
-        ],
+        "triggers": [],
         "testCases": {
           "89bc4c05-5270-4de9-b1a5-cb6a739bdef4": {
             "id": "89bc4c05-5270-4de9-b1a5-cb6a739bdef4",
@@ -53,38 +48,6 @@
     ],
     "currentFileId": "6302fe22-788f-44c9-a909-c2cb3c12a8d4",
     "resources": {
-      "apigusEast1TestAPIany": {
-        "name": "apigusEast1TestAPIany",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "TestAPI",
-          "apiId": "0itznun7w3",
-          "endpointType": "EDGE",
-          "rootResourceId": "h2lelj6j7k",
-          "existingResources": {
-            "/MyLambda": "98nqbj",
-            "/": "h2lelj6j7k",
-            "/newchange/test": "k6pdhn",
-            "/newchange": "q1ox7l",
-            "/testWithSlash": "q4m4g1",
-            "/testtwospeciallambda": "q4szm3",
-            "/testtwospecialkumutest": "wey3lk"
-          },
-          "resourceMode": 1,
-          "resourcePath": "/",
-          "resourceName": "",
-          "resourceId": "h2lelj6j7k",
-          "restMethod": "ANY",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 1,
-          "stageName": "Test",
-          "stageDeploymentId": "d0689s",
-          "mode": 1
-        }
-      },
       "ddbShop": {
         "name": "ddbShop",
         "type": "DynamoDB",
@@ -150,7 +113,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1576566560179
+    "lastSave": 1576567928541
   },
   "VCS_STATE": {
     "provider": "GitHub",

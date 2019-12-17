@@ -13,6 +13,6 @@ exports.handler = async (event) => {
             // error handling goes here
             console.log(err);
         });
-
+        
     return { "message": "Successfully executed" };
 };
